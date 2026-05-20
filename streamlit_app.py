@@ -49,16 +49,7 @@ if ingredients_list:
 import pandas as pd
 import requests
 
-smoothiefroot_response = requests.get(
-    "https://my.smoothiefroot.com/api/fruit/watermelon"
-)
+import requests  
+smoothiefroot_response = requests.get("[https://my.smoothiefroot.com/api/fruit/watermelon](https://my.smoothiefroot.com/api/fruit/watermelon)")  
+st.text(smoothiefroot_response)
 
-fruit_df = pd.DataFrame(
-    smoothiefroot_response.json(),
-    index=[0]
-)
-
-st.dataframe(
-    fruit_df,
-    use_container_width=True
-)
